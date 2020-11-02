@@ -30,10 +30,15 @@ optional arguments:
 ```console
 $ # decrypt a string
 $ python a1z26-decrypter -s 20 5 19 20 9 14 7
+testing
 $ # decrypt a file
 $ python a1z26-decrypter -f filename.txt
+output here
 $ # decrypt multiple files
 $ python a1z26-decrypter -f file1.txt file2.txt ...
+output file1.txt
+output file2.txt
+...
 ```
 
 ## License
