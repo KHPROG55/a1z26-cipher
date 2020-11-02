@@ -1,5 +1,5 @@
 # A1Z26 Decrypter
-## It's a simple script to decrypt A1Z26 Cipher.
+It's a simple script to decrypt A1Z26 Cipher.
 
 ## Install
 ```console
