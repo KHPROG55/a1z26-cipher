@@ -4,7 +4,7 @@ import sys, argparse
 # Source:
 # https://github.com/KHPROG55/a1z26-decrypter
 
-def a1z26_decipher(inp):
+def a1z26_decrypt(inp):
     out = ""
     for i in inp:
         if i.isdigit():
@@ -26,12 +26,12 @@ def main(argv):
     # -s option
     if args.string:
         inp = args.string
-        a1z26_decipher(inp)
+        a1z26_decrypt(inp)
 
     # -f option
     if args.file:
         for f in args.file:
-            a1z26_decipher(f.read().strip().split(" "))
+            a1z26_decrypt(f.read().strip().split(" "))
 
     if not any(vars(args).values()):
         parser.print_help(sys.stderr)
