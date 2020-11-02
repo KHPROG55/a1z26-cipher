@@ -2,7 +2,7 @@ import sys, argparse
 
 # Coded by KH PROG
 # Source:
-# https://github.com/KHPROG55/a1z26-decipher
+# https://github.com/KHPROG55/a1z26-decrypter
 
 def a1z26_decipher(inp):
     out = ""
