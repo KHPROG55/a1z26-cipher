@@ -2,7 +2,7 @@ import os, sys, argparse, fileinput
 
 # Coded by KH PROG
 # Source:
-# https://github.com/KHPROG55/a1z26-decrypter
+# https://github.com/KHPROG55/a1z26-cipher
 
 def a1z26_encrypt(inp):
     out = ""
@@ -28,8 +28,8 @@ def a1z26_decrypt(inp):
 
 def main(argv):
     parser = argparse.ArgumentParser()
-    parser.add_argument("-e", "--encrypt", help="Encrypt one or list of strings from stdin or file(s)", nargs="+")
-    parser.add_argument("-d", "--decrypt", help="Decrypt one or list of strings from stdin or file(s)", nargs="+")
+    parser.add_argument("-e", "--encrypt", help="Encrypt one string or list of strings from stdin or file(s)", nargs="+")
+    parser.add_argument("-d", "--decrypt", help="Decrypt one string or list of strings from stdin or file(s)", nargs="+")
     parser.add_argument("-v", "--version", action="version", version="%(prog)s 3.0")
     args = parser.parse_args()
 
@@ -57,3 +57,5 @@ def main(argv):
 
 if __name__ == "__main__":
    main(sys.argv)
+
+#end
