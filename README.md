@@ -8,36 +8,45 @@ git clone https://github.com/KHPROG55/a1z26-decrypter
 
 ## Options
 ```console
-$ python a1z26-decrypter
-usage: a1z26-decrypter.py [-h]
-                          [-s STRING [STRING ...]]
-                          [-f FILE [FILE ...]] [-v]
+$ python a1z26-decrypter.py
+usage: a1z26-decrypter.py [-h] [-e ENCRYPT [ENCRYPT ...]]
+                          [-d DECRYPT [DECRYPT ...]] [-v]
 
 optional arguments:
-  -h, --help            show this help message and
+  -h, --help            show this help message and exit
+  -e ENCRYPT [ENCRYPT ...], --encrypt ENCRYPT [ENCRYPT ...]
+                        Encrypt one or list of strings
+                        from stdin or file(s)
+  -d DECRYPT [DECRYPT ...], --decrypt DECRYPT [DECRYPT ...]
+                        Decrypt one or list of strings
+                        from stdin or file(s)
+  -v, --version         show program's version number and
                         exit
-  -s STRING [STRING ...], --string STRING [STRING ...]
-                        input a list of strings to
-                        decipher them
-  -f FILE [FILE ...], --file FILE [FILE ...]
-                        input file(s) to decipher
-                        it's content
-  -v, --version         show program's version
-                        number and exit
 ```
 
 ## Usage
 ```console
+$ # encrypt a string
+$ python a1z26-decrypter.py -e testing
+20 5 19 20 9 14 7
 $ # decrypt a string
-$ python a1z26-decrypter -s 20 5 19 20 9 14 7
+$ python a1z26-decrypter -d 20 5 19 20 9 14 7
 testing
-$ # decrypt from a file
-$ python a1z26-decrypter -f filename.txt
-output here
+$ # encrypt from a file, inside the file > "testing"
+$ python a1z26-decrypter -e filename.txt
+20 5 19 20 9 14 7
+$ # decrypt from a file  inside the file > "20 5 19 20 9 14 7"
+$ python a1z26-decrypter -d filename.txt
+testing
+$ # encrypt from multiple files
+$ python a1z26-decrypter -e file1.txt file2.txt ...
+output of file1.txt
+output of file2.txt
+...
 $ # decrypt from multiple files
-$ python a1z26-decrypter -f file1.txt file2.txt ...
-output file1.txt
-output file2.txt
+python a1z26-decrypter -d file1.txt file2.txt ...
+output of file1.txt
+output of file2.txt
 ...
 ```
 
